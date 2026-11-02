@@ -1,0 +1,4 @@
+import { Bell, ChevronDown, Menu, Search } from "lucide-react";
+export default function Topbar({ onMenu, search, setSearch }: { onMenu: () => void; search: string; setSearch: (v: string) => void }) {
+ return <header className="topbar"><button className="icon-btn mobile-menu" onClick={onMenu}><Menu size={20}/></button><div className="searchbox"><Search size={18}/><input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search words, decks, or features..." /><kbd>⌘ K</kbd></div><div className="top-actions"><button className="icon-btn notification"><Bell size={19}/><i/></button><div className="top-profile"><div className="avatar">SK</div><div><strong>Sarah Kim</strong><small>Learning Pro</small></div><ChevronDown size={15}/></div></div></header>;
+}
